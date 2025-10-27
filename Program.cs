@@ -1,4 +1,4 @@
-﻿namespace MySilkProgram;
+﻿namespace silken;
 
 using Silk.NET.Input;
 using Silk.NET.Maths;

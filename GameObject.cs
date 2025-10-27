@@ -1,6 +1,8 @@
 using System.Numerics;
 
-namespace MySilkProgram;
+#nullable enable
+
+namespace silken;
 
 /// <summary>
 /// Represents a game object with transform, mesh, and material components

@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace MySilkProgram;
+namespace silken;
 
 /// <summary>
 /// Visual quality enhancement utilities for better rendering
@@ -128,7 +128,7 @@ public static class VisualQualityEnhancer
         {
             // Add slight height variation for more natural look
             var baseScale = obj.Scale.X;
-            var heightVariation = (float)(new Random().NextDouble() * 0.3 + 0.85); // 0.85 to 1.15 range
+            var heightVariation = (float)(Random.Shared.NextDouble() * 0.3 + 0.85); // 0.85 to 1.15 range
             obj.Scale = new Vector3(baseScale, baseScale * heightVariation, baseScale);
             enhancedCornStalks++;
         }

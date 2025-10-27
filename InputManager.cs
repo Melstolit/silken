@@ -1,7 +1,7 @@
 using Silk.NET.Input;
 using System.Numerics;
 
-namespace MySilkProgram;
+namespace silken;
 
 /// <summary>
 /// InputManager class that processes keyboard input and translates to camera movements

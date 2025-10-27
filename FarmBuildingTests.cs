@@ -1,7 +1,7 @@
 using System.Numerics;
 using Xunit;
 
-namespace MySilkProgram.Tests;
+namespace silken.Tests;
 
 public class FarmBuildingTests : IDisposable
 {

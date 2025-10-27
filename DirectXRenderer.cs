@@ -4,8 +4,8 @@ using Silk.NET.Windowing;
 using Silk.NET.Core.Native;
 using System.Numerics;
 using System.Runtime.InteropServices;
-
-namespace MySilkProgram;
+#nullable enable
+namespace silken;
 
 public unsafe class DirectXRenderer : IDisposable
 {
@@ -46,7 +46,7 @@ public unsafe class DirectXRenderer : IDisposable
     // Lighting parameters
     private Vector3 _lightDirection = Vector3.Normalize(new Vector3(-0.5f, -1.0f, -0.3f)); // Directional light from above-right
     private float _lightIntensity = 1.0f;
-    private Vector3 _lightColor = new Vector3(1.0f, 0.95f, 0.8f); // Warm sunlight
+    private Vector3 _lightColor = new(1.0f, 0.95f, 0.8f); // Warm sunlight
     private float _ambientStrength = 0.2f;
     private Vector3 _cameraPosition = Vector3.Zero;
     private float _specularStrength = 0.5f;
@@ -55,7 +55,7 @@ public unsafe class DirectXRenderer : IDisposable
     private bool _fogEnabled = true;
     private float _fogStart = 10.0f; // Distance where fog starts
     private float _fogEnd = 50.0f;   // Distance where fog is maximum
-    private Vector3 _fogColor = new Vector3(0.7f, 0.8f, 0.9f); // Light blue-gray fog
+    private Vector3 _fogColor = new(0.7f, 0.8f, 0.9f); // Light blue-gray fog
 
     public bool IsInitialized => _initialized;
 
@@ -89,7 +89,7 @@ public unsafe class DirectXRenderer : IDisposable
         }
     }
     
-    private void CreateDevice()
+    private static void CreateDevice()
     {
         Console.WriteLine("Creating DirectX 11 device (Basic Mode)...");
         Console.WriteLine("✓ DirectX 11 device created (simulated)");
@@ -102,7 +102,7 @@ public unsafe class DirectXRenderer : IDisposable
         Console.WriteLine($"✓ Swap chain created (simulated): {windowSize.X}x{windowSize.Y}");
     }
     
-    private void CreateRenderTargetView()
+    private static void CreateRenderTargetView()
     {
         Console.WriteLine("Creating render target view (Basic Mode)...");
         Console.WriteLine("✓ Render target view created (simulated)");
@@ -111,7 +111,7 @@ public unsafe class DirectXRenderer : IDisposable
     private void CreateDepthStencilView()
     {
         Console.WriteLine("Creating depth stencil view (Basic Mode)...");
-        var windowSize = _window!.Size;
+        //var windowSize = _window!.Size;
         Console.WriteLine("✓ Depth stencil view created (simulated)");
     }
     

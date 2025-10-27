@@ -1,7 +1,7 @@
 using System.Numerics;
 using System.Diagnostics;
-
-namespace MySilkProgram;
+#nullable enable
+namespace silken;
 
 /// <summary>
 /// Performance optimization utilities for the 3D engine
@@ -11,7 +11,7 @@ public static class PerformanceOptimizer
     private static readonly Stopwatch _frameTimer = new();
     private static readonly Queue<double> _frameTimeHistory = new();
     private static double _averageFrameTime = 0.0;
-    private static int _framesSinceLastOptimization = 0;
+    //private static int _framesSinceLastOptimization = 0;
     private static readonly int MaxFrameHistory = 60; // Track last 60 frames
     
     /// <summary>
@@ -56,7 +56,7 @@ public static class PerformanceOptimizer
         
         // Update average
         _averageFrameTime = _frameTimeHistory.Average();
-        _framesSinceLastOptimization++;
+        //_framesSinceLastOptimization++;
     }
     
     /// <summary>

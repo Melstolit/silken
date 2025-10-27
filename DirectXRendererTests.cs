@@ -3,7 +3,7 @@ using Silk.NET.Windowing;
 using Silk.NET.Maths;
 using System.Drawing;
 
-namespace MySilkProgram;
+namespace silken;
 
 public class DirectXRendererTests : IDisposable
 {

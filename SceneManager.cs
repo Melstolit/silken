@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Numerics;
-
-namespace MySilkProgram;
+#nullable enable
+namespace silken;
 
 /// <summary>
 /// Manages the scene hierarchy and handles multiple game objects

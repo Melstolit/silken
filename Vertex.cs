@@ -1,7 +1,7 @@
 using System.Numerics;
 using System.Runtime.InteropServices;
-
-namespace MySilkProgram;
+#nullable enable
+namespace silken;
 
 /// <summary>
 /// Represents a vertex with position, normal, and texture coordinates for 3D rendering

@@ -1,8 +1,8 @@
-using Silk.NET.Direct3D11;
+//using Silk.NET.Direct3D11;
 using System.Numerics;
-using System.Runtime.InteropServices;
-
-namespace MySilkProgram;
+//using System.Runtime.InteropServices;
+#nullable enable
+namespace silken;
 
 /// <summary>
 /// Represents a 3D mesh with vertex and index data, including DirectX 12 buffer management

@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace MySilkProgram;
+namespace silken;
 
 /// <summary>
 /// Camera class that handles 3D transformations, view matrix, and projection matrix calculations

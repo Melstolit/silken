@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace MySilkProgram;
+namespace silken;
 
 /// <summary>
 /// Test class to verify scene rendering functionality

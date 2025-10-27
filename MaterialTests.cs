@@ -1,7 +1,7 @@
 using System.Numerics;
 using Xunit;
 
-namespace MySilkProgram;
+namespace silken;
 
 public class MaterialTests
 {

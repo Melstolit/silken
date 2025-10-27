@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-
-namespace MySilkProgram.Tests;
+#nullable enable
+namespace silken.Tests;
 
 public class SceneManagerTests : IDisposable
 {
@@ -11,6 +11,7 @@ public class SceneManagerTests : IDisposable
     private readonly GameObject _testObject2;
     private readonly Mesh _testMesh;
     private readonly Material _testMaterial;
+    private bool _disposed;
     
     public SceneManagerTests()
     {
@@ -298,13 +299,28 @@ public class SceneManagerTests : IDisposable
         Assert.Empty(_sceneManager.Materials);
     }
     
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposed)
+        {
+            if (disposing)
+            {
+                // Dispose managed resources
+                _sceneManager?.Dispose();
+                _testObject1?.Dispose();
+                _testObject2?.Dispose();
+                _testMesh?.Dispose();
+                _testMaterial?.Dispose();
+            }
+
+            _disposed = true;
+        }
+    }
+
     public void Dispose()
     {
-        _sceneManager?.Dispose();
-        _testObject1?.Dispose();
-        _testObject2?.Dispose();
-        _testMesh?.Dispose();
-        _testMaterial?.Dispose();
+        Dispose(true);
+        GC.SuppressFinalize(this);
     }
 }
 

@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace MySilkProgram;
+namespace silken;
 
 /// <summary>
 /// Static class for generating procedural farm building geometry

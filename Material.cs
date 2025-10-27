@@ -1,6 +1,6 @@
 using System.Numerics;
-
-namespace MySilkProgram;
+#nullable enable
+namespace silken;
 
 /// <summary>
 /// Represents a material with lighting properties for 3D rendering
